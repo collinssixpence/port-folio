@@ -1,0 +1,129 @@
+import React, { useState } from 'react';
+import './Portfolio.css';
+
+const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const projectData = [
+    {
+      id: 1,
+      title: 'PrimeStay',
+      subtitle: 'Guest House Booking Platform',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      description: 'An enterprise-grade luxury accommodation and hospitality reservation ecosystem featuring rapid real-time scheduling constraints and multi-tier transactional ledger safety.',
+      features: ['Real-time availability validation', 'Automated invoicing engine', 'Dynamic localized currency mapping'],
+      techStack: ['React.js', 'Django REST', 'Python', 'SQLite3'],
+      github: 'https://github.com',
+      demo: 'https://demo.com'
+    },
+    {
+      id: 2,
+      title: 'Shoes Closet',
+      subtitle: 'Modern Footwear E-Commerce Platform',
+      location: 'Global Deploy',
+      category: 'UI/UX',
+      description: 'A premium retail journey focusing heavily on immersive frame-rate stability, reactive cart mutations, and micro-interaction visual indicators.',
+      features: ['Custom structural variant engine', 'Optimized persistent lazy-loading', 'Stripe checkout API bindings'],
+      techStack: ['React.js', 'TypeScript', 'CSS3 Modules', 'Figma'],
+      github: 'https://github.com',
+      demo: 'https://demo.com'
+    },
+    {
+      id: 3,
+      title: 'Apex Venture Hub',
+      subtitle: 'SaaS Business Optimization Hub',
+      location: 'Distributed Architecture',
+      category: 'Ventures',
+      description: 'A structural metadata dashboard optimized for venture tracking, strategic asset distributions, and unified automated marketing funnel diagnostics.',
+      features: ['Asynchronous event streaming metrics', 'Custom canvas data reports', 'Encrypted parameter management'],
+      techStack: ['Python', 'Django', 'React.js', 'Tailwind Grid'],
+      github: 'https://github.com',
+      demo: 'https://demo.com'
+    }
+  ];
+
+  const filters = ['All', 'Software Engineering', 'UI/UX', 'Ventures'];
+
+  const filteredProjects = activeFilter === 'All' 
+    ? projectData 
+    : projectData.filter(project => project.category === activeFilter);
+
+  return (
+    <section className="portfolio-section">
+      <div className="portfolio-container">
+        <div className="section-header">
+          <h2 className="section-title">Selected Productions</h2>
+          <div className="header-line"></div>
+        </div>
+
+        
+        <div className="filter-wrapper">
+          {filters.map((filter, index) => (
+            <button
+              key={index}
+              className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
+              onClick={() => setActiveFilter(filter)}
+            >
+              <span className="filter-dot"></span>
+              {filter}
+            </button>
+          ))}
+        </div>
+
+       
+        <div className="projects-grid">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="project-card">
+              <div className="project-image-placeholder">
+                <div className="image-overlay-glow"></div>
+                <div className="placeholder-text-blueprint">// {project.title} Structural Matrix</div>
+                <span className="project-location-badge">{project.location}</span>
+              </div>
+
+              <div className="project-details">
+                <div className="project-meta">
+                  <span className="project-category-tag">{project.category}</span>
+                  <h3 className="project-title">{project.title}</h3>
+                  <h4 className="project-subtitle">{project.subtitle}</h4>
+                </div>
+
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-features-list">
+                  <h5>Core Features Architecture:</h5>
+                  <ul>
+                    {project.features.map((feature, fIdx) => (
+                      <li key={fIdx}>
+                        <span className="feature-bullet">&gt;</span> {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-tech-pills">
+                  {project.techStack.map((tech, tIdx) => (
+                    <span key={tIdx} className="tech-pill">{tech}</span>
+                  ))}
+                </div>
+
+                <div className="project-action-links">
+                  <a href={project.github} target="_blank" rel="noreferrer" className="proj-link github-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    Source Code
+                  </a>
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="proj-link demo-link">
+                    <span>Live Architecture</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

@@ -1,0 +1,393 @@
+/* ==========================================================================
+   Hero Section Base Layout
+   ========================================================================== */
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 40px 80px 40px;
+  background-color: #050505;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse 60% 60% at 50% -10%, rgba(168, 85, 247, 0.08), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Left Layout Typography & CTA UI Buttons
+   ========================================================================== */
+.badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.badge-ping {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e; /* Neon Green */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.5px;
+}
+
+.hero-headline {
+  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(90deg, #06b6d4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typing Core Layout Container */
+.typing-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.code-prefix {
+  color: #22c55e;
+}
+
+.typing-text {
+  color: #06b6d4;
+}
+
+.typing-cursor {
+  color: #ffffff;
+  animation: pulseGlow 0.8s infinite;
+  margin-left: 2px;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 580px;
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #050505;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-primary:hover {
+  background: #06b6d4;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+}
+
+.cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Right Side Animation Orbit System & Elements
+   ========================================================================== */
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.orbit-system {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center Avatar Glow Module */
+.avatar-core {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #06b6d4, #a855f7);
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.25);
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-code-initials {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Orbit Path Setup Ring Elements */
+.orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.025);
+  border-radius: 50%;
+}
+
+.ring-1 {
+  width: 220px;
+  height: 220px;
+  animation: rotateOrbit 25s linear infinite;
+}
+
+.ring-2 {
+  width: 320px;
+  height: 320px;
+  animation: rotateOrbit 40s linear infinite reverse;
+}
+
+.ring-3 {
+  width: 420px;
+  height: 420px;
+  animation: rotateOrbit 55s linear infinite;
+}
+
+/* Orbit Mechanical Placement Icons */
+.orbit-icon {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.orbit-icon:hover {
+  border-color: #06b6d4;
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+/* Absolute Node Placements Along Orbit Ring Vectors */
+.icon-react { top: 10%; left: 15%; border-color: rgba(6, 182, 212, 0.3); }
+.icon-python { bottom: 12%; right: 15%; border-color: rgba(34, 197, 94, 0.3); }
+.icon-ts { top: 40%; right: -5%; border-color: rgba(6, 182, 212, 0.3); }
+.icon-django { bottom: 40%; left: -5%; border-color: rgba(168, 85, 247, 0.3); }
+.icon-git { top: -2%; left: 45%; border-color: rgba(239, 68, 68, 0.3); }
+.icon-js { bottom: -2%; left: 45%; border-color: rgba(234, 179, 8, 0.3); }
+
+/* ==========================================================================
+   High-End Technical Premium Cards UI 
+   ========================================================================== */
+.floating-card {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  z-index: 15;
+}
+
+.snippet-card {
+  top: -10px;
+  right: -20px;
+  width: 260px;
+  padding: 12px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.header-dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  margin-right: 3px;
+}
+
+.card-filename {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  font-family: monospace;
+}
+
+.card-body {
+  font-family: monospace;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.8);
+}
+
+.keyword { color: #a855f7; }
+.string { color: #22c55e; }
+
+.git-card {
+  bottom: 0px;
+  left: -20px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: monospace;
+  font-size: 0.75rem;
+  border-color: rgba(34, 197, 94, 0.2);
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+.git-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255,255,255,0.4);
+}
+
+.git-success {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Animations & Media Responsive Layout Triggers
+   ========================================================================== */
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1100px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    text-align: center;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-subtext {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .snippet-card { right: 20px; }
+  .git-card { left: 20px; }
+}
+
+@media (max-width: 600px) {
+  .hero-container { padding: 100px 20px 40px 20px; }
+  .hero-actions { width: 100%; flex-direction: column; }
+  .cta-primary, .cta-secondary { width: 100%; justify-content: center; }
+  .orbit-system { transform: scale(0.8); }
+  .floating-card { display: none; } /* Drop elements on small devices */
+}
