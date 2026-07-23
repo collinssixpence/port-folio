@@ -1,8 +1,8 @@
 import React from 'react';
 import './Certifications.css';
 
-// Import certificate image (adjust path to actual file in the project)
-import cert from '../../assets/certi.png'; // 1. Import the image file  
+// Import certificate images
+import cert from '../../assets/certi.png'; 
 
 const Certifications = () => {
   const credentials = [
@@ -11,14 +11,16 @@ const Certifications = () => {
       issuer: 'Technical Systems Institute',
       date: '2025',
       id: 'ID: FE-992381-X',
-      image: cert 
+      image: cert,
+      link: '#' // Add external verification URL here if you have one
     },
     {
       title: 'Enterprise Architecture & Cloud Optimization',
       issuer: 'Coursera',
       date: '2024',
       id: 'ID: CA-110294-M',
-      image: cert  // 2. Add the imported image variable here
+      image: cert,
+      link: '#'
     }
   ];
 
@@ -31,28 +33,30 @@ const Certifications = () => {
         </div>
 
         <div className="certs-grid-layout">
-          {credentials.map((cert, idx) => (
+          {credentials.map((certItem, idx) => (
             <div key={idx} className="cert-corporate-badge">
-              {/* 3. Display the certificate image at the top of the badge */}
+              {/* Image Preview Box */}
               <div className="cert-image-wrapper">
                 <img 
-                  src={cert.image} 
-                  alt={`${cert.title} Certificate`} 
+                  src={certItem.image} 
+                  alt={`${certItem.title} Certificate`} 
                   className="cert-image" 
                 />
               </div>
 
+              {/* Card Details */}
               <div className="badge-guts">
                 <div className="badge-branding">
                   <div className="branding-icon-shell">⬡</div>
                   <div>
-                    <h3 className="cert-title">{cert.title}</h3>
-                    <p className="cert-issuer">{cert.issuer}</p>
+                    <h3 className="cert-title">{certItem.title}</h3>
+                    <p className="cert-issuer">{certItem.issuer}</p>
                   </div>
                 </div>
+
                 <div className="badge-footer-meta">
-                  <span className="cert-date">{cert.date}</span>
-                  <span className="cert-id-string">{cert.id}</span>
+                  <span className="cert-date">{certItem.date}</span>
+                  <span className="cert-id-string">{certItem.id}</span>
                 </div>
               </div>
             </div>

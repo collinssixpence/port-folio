@@ -6,14 +6,17 @@
   box-sizing: border-box;
 }
 
-
 .portfolio-container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
-.section-title{
+
+.section-title {
   margin-bottom: 2.5rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /* Tab Filter Interfaces */
@@ -81,34 +84,40 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Immersive Technical Blueprint Placeholder Block */
-.project-image-placeholder {
+/* Updated Technical Image Container */
+.project-image-container {
   position: relative;
   width: 100%;
   height: 240px;
-  background: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+  background-color: #0a0a0a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
 }
 
 .image-overlay-glow {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
-  top: 10%;
-  left: 10%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(5, 5, 5, 0.85) 100%
+  );
   pointer-events: none;
-}
-
-.placeholder-text-blueprint {
-  font-family: monospace;
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
 }
 
 .project-location-badge {
@@ -122,9 +131,10 @@
   border-radius: 4px;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
 }
 
-
+/* Card Content Styling */
 .project-details {
   padding: 32px;
   display: flex;
@@ -175,6 +185,8 @@
 
 .project-features-list ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -247,8 +259,15 @@
   text-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
 }
 
+/* Responsive Overrides */
 @media (max-width: 600px) {
-  .portfolio-section { padding: 80px 20px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-details { padding: 20px; }
+  .portfolio-section {
+    padding: 80px 20px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-details {
+    padding: 20px;
+  }
 }

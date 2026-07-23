@@ -6,26 +6,28 @@ const Skills = () => {
     {
       title: 'Frontend Architecture',
       skills: [
-        { name: 'React.js', progress: '95%' },
-        { name: 'JavaScript (ES6+)', progress: '92%' },
-        { name: 'TypeScript', progress: '40%' },
-        { name: 'HTML5 / CSS3 Layouts', progress: '95%' }
+        'React.js',
+        'JavaScript (ES6+)',
+        'TypeScript',
+        'HTML5 / CSS3 Layouts',
+        'Tailwind CSS'
       ]
     },
     {
       title: 'Backend Systems',
       skills: [
-        { name: 'Python Engineering', progress: '90%' },
-        { name: 'Django Framework', progress: '85%' },
-        { name: 'SQLite / REST Ecosystems', progress: '50%' }
+        'Python Engineering',
+        'Django Framework',
+        'PostgreSQL',
+        'SQLite / REST Ecosystems'
       ]
     },
     {
       title: 'Engineering Tools & UX',
       skills: [
-        { name: 'Git & Automated CI/CD', progress: '90%' },
-        { name: 'Figma Systems Prototype', progress: '82%' },
-        { name: 'VS Code Workflow Automation', progress: '95%' }
+        'Git & Automated CI/CD',
+        'Figma Systems Prototype',
+        'VS Code Workflow Automation'
       ]
     }
   ];
@@ -43,22 +45,17 @@ const Skills = () => {
             <div key={index} className="skills-card">
               <div className="skills-card-glow"></div>
               <h3 className="category-title">{category.title}</h3>
-              <div className="skills-list">
+              
+              {/* Refactored from progress bars to skill tags */}
+              <div className="skills-pills-wrapper">
                 {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.progress}</span>
-                    </div>
-                    <div className="skill-track">
-                      <div 
-                        className="skill-fill" 
-                        style={{ '--target-width': skill.progress }}
-                      ></div>
-                    </div>
+                  <div key={sIdx} className="skill-pill-tag">
+                    <span className="skill-bullet">&gt;</span>
+                    <span className="skill-name-text">{skill}</span>
                   </div>
                 ))}
               </div>
+
             </div>
           ))}
         </div>

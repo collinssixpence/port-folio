@@ -12,6 +12,13 @@
   margin: 0 auto;
 }
 
+.section-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
 .certs-grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -21,53 +28,54 @@
 
 /* Card Container */
 .cert-corporate-badge {
-  background: linear-gradient(135deg, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.002) 100%);
+  background: rgba(10, 10, 10, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 10px;
-  padding: 24px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adds space between image and badge text */
-  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .cert-corporate-badge:hover {
-  border-color: rgba(6, 182, 212, 0.2);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* ========================================== */
-/* NEW: Certificate Image Styling             */
-/* ========================================== */
+/* Fixed Image Box (Prevents Cropping + Softens White Background) */
 .cert-image-wrapper {
   width: 100%;
-  height: 220px; /* Height of your certificate preview */
-  overflow: hidden;
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: rgba(255, 255, 255, 0.02);
+  height: 200px;
+  background: rgba(0, 0, 0, 0.4); /* Dark backdrop behind the white certificate */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
 }
 
 .cert-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Change to 'contain' if you want to see the whole document page without crop */
-  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Keeps full document visible without chopping text */
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Subtle zoom effect on the image when hovering over the card */
 .cert-corporate-badge:hover .cert-image {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
-/* ========================================== */
 
+/* Text Content Area */
 .badge-guts {
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 100%;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
@@ -88,6 +96,7 @@
   font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.2px;
+  margin: 0;
 }
 
 .cert-issuer {
@@ -100,7 +109,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: 16px;
 }
 
@@ -124,6 +133,6 @@
     grid-template-columns: 1fr; 
   }
   .cert-image-wrapper {
-    height: 180px; /* Slightly smaller height on mobile screens */
+    height: 170px;
   }
 }
