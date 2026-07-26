@@ -3,6 +3,9 @@ import './Portfolio.css';
 
 // 1. Import your project images here
 import cert from '../../assets/certi.png'; 
+import MyDBMS from '../../assets/MyDBMS.jpeg'; 
+import Superfert from '../../assets/Superfert Landing Page.png'; 
+import Vvid from '../../assets/Vivid.png'; 
 // Replace these paths with your real local image files when available
 
 
@@ -16,7 +19,7 @@ const Portfolio = () => {
       subtitle: 'Learning platform for database management systems',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: cert, // Assign imported image
+      image: MyDBMS, // Assign imported image
       description:
         'DBMS Learning Platform is an educational web application tailored for students and aspiring software engineers looking to solidify their knowledge of database management systems.',
       features: [
@@ -32,39 +35,41 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Shoes Closet',
-      subtitle: 'Modern Footwear E-Commerce Platform',
-      location: 'Global Deploy',
-      category: 'UI/UX',
-      image: cert, // Assign imported image
+      title: 'Vivid Horizons',
+      subtitle: 'Immersive Travel & Tourism Platform',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      image: Vvid, // Assign imported image
       description:
-        'A premium retail journey focusing heavily on immersive frame-rate stability, reactive cart mutations, and micro-interaction visual indicators.',
+        'A modern web application crafted to promote tourism in Zimbabwe. Features interactive tour discovery, seamless navigation, client testimonials, and newsletter engagement for travelers.',
       features: [
-        'Custom structural variant engine',
-        'Optimized persistent lazy-loading',
-        'Stripe checkout API bindings',
+       'Interactive Tour Discovery Engine',
+        'Curated Destination Highlights (Victoria Falls)',
+        'Dynamic Client Testimonials Section',
+        'Automated Newsletter Subscriptions'
       ],
-      techStack: ['React.js', 'TypeScript', 'CSS3 Modules', 'Figma'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
+      techStack: ['React.js', 'TypeScript', 'CSS3 Modules'],
+      github: 'https://github.com/collinssixpence/Vivid-Horizons-project.git',
+      demo: 'https://vivid-horizons-project.vercel.app',
     },
     {
       id: 3,
-      title: 'Apex Venture Hub',
-      subtitle: 'SaaS Business Optimization Hub',
-      location: 'Distributed Architecture',
-      category: 'Ventures',
-      image: cert, // Assign imported image
+      title: 'Superfert Fertilizer',
+      subtitle: 'Agricultural Solutions & Products Platform',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      image: Superfert, // Assign imported image
       description:
-        'A structural metadata dashboard optimized for venture tracking, strategic asset distributions, and unified automated marketing funnel diagnostics.',
+        'A high-performance corporate landing page designed for an agricultural fertilizer brand. Provides an intuitive showcase for crop-specific nutrient solutions, farming services, and company insights.',
       features: [
-        'Asynchronous event streaming metrics',
-        'Custom canvas data reports',
-        'Encrypted parameter management',
+       'Interactive Crop & Fertilizer Catalog',
+        'Custom Agronomy Services Showcase',
+        'Corporate News & Event Publishing Engine',
+        'Direct Customer Inquiry & Contact Interface'
       ],
-      techStack: ['Python', 'Django', 'React.js', 'Tailwind Grid'],
-      github: 'https://github.com',
-      demo: 'https://demo.com',
+      techStack: ['HTML & CSS',  'Javascript'],
+      github: 'https://github.com/collinssixpence/Apex-Venture-Hub.git',
+      demo: 'https://apex-venture-hub.vercel.app/',
     },
   ];
 

@@ -2,7 +2,8 @@ import React from 'react';
 import './Certifications.css';
 
 // Import certificate images
-import cert from '../../assets/certi.png'; 
+import Software from '../../assets/Softwarecert.png'; 
+import Python from '../../assets/Pythoncert.png'; 
 
 const Certifications = () => {
   const credentials = [
@@ -11,7 +12,7 @@ const Certifications = () => {
       issuer: 'Technical Systems Institute',
       date: '2025',
       id: 'ID: FE-992381-X',
-      image: cert,
+      image: Software,
       link: '#' // Add external verification URL here if you have one
     },
     {
@@ -19,7 +20,7 @@ const Certifications = () => {
       issuer: 'Coursera',
       date: '2024',
       id: 'ID: CA-110294-M',
-      image: cert,
+      image: Python,
       link: '#'
     }
   ];

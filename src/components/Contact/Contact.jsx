@@ -35,9 +35,9 @@ const Contact = () => {
             </div>
 
             <div className="social-links-cluster">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="soc-circle">In</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="soc-circle">Gh</a>
-              <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="soc-circle">Wa</a>
+              <a href="https://www.linkedin.com/in/collins-sixpence-123456789/" target="_blank" rel="noreferrer" className="soc-circle">In</a>
+              <a href="https://github.com/collinssixpence" target="_blank" rel="noreferrer" className="soc-circle">Gh</a>
+              <a href="https://wa.me/263781367005?text=Hello%20Collins,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer" className="soc-circle">Wa</a>
             </div>
           </div>
 
