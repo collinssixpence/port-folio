@@ -77,7 +77,7 @@ const Portfolio = () => {
       subtitle: 'Agricultural Solutions & Products Platform',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: Superfert,
+      image: superfert,
       description:
         'A high-performance corporate landing page designed for an agricultural fertilizer brand. Provides an intuitive showcase for crop-specific nutrient solutions, farming services, and company insights.',
       features: [
