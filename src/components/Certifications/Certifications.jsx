@@ -8,17 +8,17 @@ import Python from '../../assets/Pythoncert.png';
 const Certifications = () => {
   const credentials = [
     {
-      title: 'Advanced Full-Stack Engineering Blueprint',
-      issuer: 'Technical Systems Institute',
-      date: '2025',
+      title: 'Introduction to Software Engineering',
+      issuer: 'Coursera',
+      date: '2026',
       id: 'ID: FE-992381-X',
       image: Software,
       link: '#' // Add external verification URL here if you have one
     },
     {
-      title: 'Enterprise Architecture & Cloud Optimization',
+      title: 'Crash Course on Python',
       issuer: 'Coursera',
-      date: '2024',
+      date: '2026',
       id: 'ID: CA-110294-M',
       image: Python,
       link: '#'

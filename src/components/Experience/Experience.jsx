@@ -3,26 +3,26 @@ import './Experience.css';
 
 const Experience = () => {
   const experiences = [
-//     {
-//       role: 'Senior Full-Stack Architect',
-//       company: 'Apex Tech Labs',
-//       period: '2024 - Present',
-//       points: [
-//         'Designed high-throughput data processing workflows handling millions of telemetry events weekly.',
-//         'Migrated key UI modules into strict TypeScript types, improving code reliability and compilation safety.',
-//         'Mentored junior engineering personnel on deep optimization targets across relational database indices.'
-//       ]
-//     },
-//     {
-//       role: 'Full-Stack Software Engineer',
-//       company: 'Vanguard Ventures',
-//       period: '2021 - 2024',
-//       points: [
-//         'Built full-stack product layers via robust Django services integrated directly with responsive React components.',
-//         'Reduced visual interaction layout delays by 35% through custom asset caching and lazy-loading systems.',
-//         'Deployed scalable automation webhooks to streamline payment processing validations securely.'
-//       ]
-//     }
+    {
+      role: 'Senior Full-Stack Architect',
+      company: 'Apex Tech Labs',
+      period: '2024 - Present',
+      points: [
+        'Designed high-throughput data processing workflows handling millions of telemetry events weekly.',
+        'Migrated key UI modules into strict TypeScript types, improving code reliability and compilation safety.',
+        'Mentored junior engineering personnel on deep optimization targets across relational database indices.'
+      ]
+    },
+    {
+      role: 'Full-Stack Software Engineer',
+      company: 'Vanguard Ventures',
+      period: '2021 - 2024',
+      points: [
+        'Built full-stack product layers via robust Django services integrated directly with responsive React components.',
+        'Reduced visual interaction layout delays by 35% through custom asset caching and lazy-loading systems.',
+        'Deployed scalable automation webhooks to streamline payment processing validations securely.'
+      ]
+    }
   ];
 
   return (

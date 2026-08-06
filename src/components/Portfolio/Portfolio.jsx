@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './Portfolio.css';
 
-// 1. Import your project images here
+// 1. Import project images
 import cert from '../../assets/certi.png'; 
 import MyDBMS from '../../assets/MyDBMS.jpeg'; 
 import Superfert from '../../assets/Superfert Landing Page.png'; 
 import Vvid from '../../assets/Vivid.png'; 
-// Replace these paths with your real local image files when available
-
+// Import your food ordering image here (e.g. import FoodOrderImg from '../../assets/FoodOrdering.png';)
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -15,11 +14,31 @@ const Portfolio = () => {
   const projectData = [
     {
       id: 1,
+      title: 'Food Ordering App',
+      subtitle: 'Full-stack online food ordering & restaurant system',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      image: cert, // Replace 'cert' with your imported FoodOrdering image variable
+      description:
+        'A feature-rich full-stack web application for online food ordering. Integrates secure user authentication, interactive menu discovery, cart management, and seamless PostgreSQL database persistence.',
+      features: [
+        'JWT-based User Authentication & Authorization',
+        'Interactive Food Item Catalog & Dynamic Cart',
+        'Express RESTful API with Prisma ORM',
+        'PostgreSQL Database Schema & Data Models',
+        'Full-Stack Deployment on Vercel & Render',
+      ],
+      techStack: ['React.js', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
+      github: 'https://github.com/collinssixpence/food-ordering',
+      demo: 'https://food-ordering-yft7.vercel.app/',
+    },
+    {
+      id: 2,
       title: 'DBMS',
       subtitle: 'Learning platform for database management systems',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: MyDBMS, // Assign imported image
+      image: MyDBMS,
       description:
         'DBMS Learning Platform is an educational web application tailored for students and aspiring software engineers looking to solidify their knowledge of database management systems.',
       features: [
@@ -34,16 +53,16 @@ const Portfolio = () => {
       demo: 'https://vite-project-six-nu.vercel.app/',
     },
     {
-      id: 2,
+      id: 3,
       title: 'Vivid Horizons',
       subtitle: 'Immersive Travel & Tourism Platform',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: Vvid, // Assign imported image
+      image: Vvid,
       description:
         'A modern web application crafted to promote tourism in Zimbabwe. Features interactive tour discovery, seamless navigation, client testimonials, and newsletter engagement for travelers.',
       features: [
-       'Interactive Tour Discovery Engine',
+        'Interactive Tour Discovery Engine',
         'Curated Destination Highlights (Victoria Falls)',
         'Dynamic Client Testimonials Section',
         'Automated Newsletter Subscriptions'
@@ -53,21 +72,21 @@ const Portfolio = () => {
       demo: 'https://vivid-horizons-project.vercel.app',
     },
     {
-      id: 3,
+      id: 4,
       title: 'Superfert Fertilizer',
       subtitle: 'Agricultural Solutions & Products Platform',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: Superfert, // Assign imported image
+      image: Superfert,
       description:
         'A high-performance corporate landing page designed for an agricultural fertilizer brand. Provides an intuitive showcase for crop-specific nutrient solutions, farming services, and company insights.',
       features: [
-       'Interactive Crop & Fertilizer Catalog',
+        'Interactive Crop & Fertilizer Catalog',
         'Custom Agronomy Services Showcase',
         'Corporate News & Event Publishing Engine',
         'Direct Customer Inquiry & Contact Interface'
       ],
-      techStack: ['HTML & CSS',  'Javascript'],
+      techStack: ['HTML & CSS', 'JavaScript'],
       github: 'https://github.com/collinssixpence/Apex-Venture-Hub.git',
       demo: 'https://apex-venture-hub.vercel.app/',
     },
