@@ -3,6 +3,7 @@ import './Portfolio.css';
 
 // 1. Import project images
 import cert from '../../assets/certi.png'; 
+import food from '../../assets/Food.png'; 
 import MyDBMS from '../../assets/MyDBMS.jpeg'; 
 import Superfert from '../../assets/Superfert Landing Page.png'; 
 import Vvid from '../../assets/Vivid.png'; 
@@ -18,7 +19,7 @@ const Portfolio = () => {
       subtitle: 'Full-stack online food ordering & restaurant system',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: cert, // Replace 'cert' with your imported FoodOrdering image variable
+      image: food, // Replace 'cert' with your imported FoodOrdering image variable
       description:
         'A feature-rich full-stack web application for online food ordering. Integrates secure user authentication, interactive menu discovery, cart management, and seamless PostgreSQL database persistence.',
       features: [
@@ -77,7 +78,7 @@ const Portfolio = () => {
       subtitle: 'Agricultural Solutions & Products Platform',
       location: 'Harare, Zimbabwe',
       category: 'Software Engineering',
-      image: superfert,
+      image: Superfert,
       description:
         'A high-performance corporate landing page designed for an agricultural fertilizer brand. Provides an intuitive showcase for crop-specific nutrient solutions, farming services, and company insights.',
       features: [
