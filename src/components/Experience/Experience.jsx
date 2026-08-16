@@ -4,23 +4,22 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      role: 'Senior Full-Stack Architect',
-      company: 'Apex Tech Labs',
-      period: '2024 - Present',
+      role: 'Coding Instructor / Youth Mentor',
+      company: 'Uncommon.Org / Community Outreach',
+      period: 'Present',
       points: [
-        'Designed high-throughput data processing workflows handling millions of telemetry events weekly.',
-        'Migrated key UI modules into strict TypeScript types, improving code reliability and compilation safety.',
-        'Mentored junior engineering personnel on deep optimization targets across relational database indices.'
+        'Taught block-based programming (Scratch) and foundational computer literacy to primary and secondary school students across Harare.',
+        'Simplified complex algorithmic logic and computational thinking for young learners, boosting youth digital literacy.',
+        'Fostered strong communication, leadership, and public speaking skills while presenting tech curriculum to schools.'
       ]
     },
     {
-      role: 'Full-Stack Software Engineer',
-      company: 'Vanguard Ventures',
-      period: '2021 - 2024',
+      role: 'Software Engineering Student Developer',
+      company: 'Uncommon.Org',
+      period: '2025 - 2026',
       points: [
-        'Built full-stack product layers via robust Django services integrated directly with responsive React components.',
-        'Reduced visual interaction layout delays by 35% through custom asset caching and lazy-loading systems.',
-        'Deployed scalable automation webhooks to streamline payment processing validations securely.'
+        'Engaged in intensive project-based software engineering training covering full-stack web engineering, API development, and UI/UX best practices.',
+        'Collaborated with peer developers using Git version control to complete client and internal web initiatives.'
       ]
     }
   ];
@@ -29,7 +28,7 @@ const Experience = () => {
     <section className="experience-section">
       <div className="experience-container">
         <div className="section-header">
-          <h2 className="section-title">Professional History</h2>
+          <h2 className="section-title">Experience & Leadership</h2>
           <div className="header-line"></div>
         </div>
 
