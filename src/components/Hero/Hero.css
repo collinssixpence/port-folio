@@ -11,7 +11,7 @@
   padding: 120px 40px 80px 40px;
   background-color: #050505;
   box-sizing: border-box;
-  overflow: hidden; /* Prevents horizontal scrollbars */
+  overflow: hidden;
 }
 
 .hero-mesh {
@@ -29,7 +29,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
@@ -56,7 +56,6 @@
   background-color: #22c55e;
   border-radius: 50%;
   box-shadow: 0 0 10px #22c55e;
-  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 .badge-text {
@@ -109,7 +108,6 @@
 
 .typing-cursor {
   color: #ffffff;
-  animation: pulseGlow 0.8s infinite;
   margin-left: 2px;
 }
 
@@ -138,7 +136,7 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s ease;
   box-sizing: border-box;
 }
 
@@ -146,7 +144,6 @@
   background: #06b6d4;
   color: #ffffff;
   box-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
-  transform: translateY(-2px);
 }
 
 .cta-secondary {
@@ -160,240 +157,91 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s ease;
   box-sizing: border-box;
 }
 
 .cta-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   Right Side Animation Orbit System
+   Right Side - Compact Floating Code Window
    ========================================================================== */
 .hero-right {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 500px;
 }
 
-.orbit-system {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar-core {
-  position: relative;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(135deg, #06b6d4, #a855f7);
-  z-index: 10;
-  box-shadow: 0 0 40px rgba(168, 85, 247, 0.25);
-}
-
-.avatar-placeholder {
+.code-window {
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatar-code-initials {
-  font-family: monospace;
-  font-weight: bold;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.4));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.orbit-ring {
-  position: absolute;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 50%;
-}
-
-.ring-1 {
-  width: 200px;
-  height: 200px;
-  animation: rotateOrbit 25s linear infinite;
-}
-
-.ring-2 {
-  width: 300px;
-  height: 300px;
-  animation: rotateOrbit 40s linear infinite reverse;
-}
-
-.ring-3 {
-  width: 390px;
-  height: 390px;
-  animation: rotateOrbit 55s linear infinite;
-}
-
-/* Counter-rotations to keep icon text upright */
-.ring-1 .orbit-icon {
-  animation: counterRotateOrbit 25s linear infinite;
-}
-
-.ring-2 .orbit-icon {
-  animation: counterRotateOrbit 40s linear infinite reverse;
-}
-
-.ring-3 .orbit-icon {
-  animation: counterRotateOrbit 55s linear infinite;
-}
-
-.orbit-icon {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #0d0d0d;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  font-weight: bold;
-  font-family: monospace;
-  color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.orbit-icon:hover {
-  border-color: #06b6d4;
-  transform: scale(1.2);
-  color: #ffffff;
-}
-
-.icon-react { top: 10%; left: 15%; border-color: rgba(6, 182, 212, 0.3); }
-.icon-python { bottom: 12%; right: 15%; border-color: rgba(34, 197, 94, 0.3); }
-.icon-ts { top: 40%; right: -5%; border-color: rgba(6, 182, 212, 0.3); }
-.icon-django { bottom: 40%; left: -5%; border-color: rgba(168, 85, 247, 0.3); }
-.icon-git { top: -2%; left: 45%; border-color: rgba(239, 68, 68, 0.3); }
-.icon-js { bottom: -2%; left: 45%; border-color: rgba(234, 179, 8, 0.3); }
-
-/* ==========================================================================
-   Floating Glass Cards
-   ========================================================================== */
-.floating-card {
-  position: absolute;
-  background: rgba(10, 10, 10, 0.75);
+  max-width: 360px;
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  z-index: 15;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  box-sizing: border-box;
 }
 
-.snippet-card {
-  top: -10px;
-  right: -10px;
-  width: 240px;
-  padding: 12px;
-  animation: float 6s ease-in-out infinite;
+.float-animation {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .card-header {
   display: flex;
   align-items: center;
-  gap: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding-bottom: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-.header-dots span {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  margin-right: 3px;
+.header-dots {
+  display: flex;
+  gap: 6px;
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #eab308; }
+.dot.green { background: #22c55e; }
 
 .card-filename {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.4);
   font-family: monospace;
 }
 
 .card-body {
-  font-family: monospace;
-  font-size: 0.75rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.8rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
 
 .keyword { color: #a855f7; }
 .string { color: #22c55e; }
-
-.git-card {
-  bottom: 0px;
-  left: -10px;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: monospace;
-  font-size: 0.75rem;
-  border-color: rgba(34, 197, 94, 0.2);
-  animation: float 7s ease-in-out infinite 1s;
-}
-
-.git-status {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.git-success {
-  color: #22c55e;
-  font-weight: bold;
-}
-
-/* ==========================================================================
-   Keyframe Animations
-   ========================================================================== */
-@keyframes rotateOrbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes counterRotateOrbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-360deg); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
 
 /* ==========================================================================
    Responsive Breakpoints
@@ -405,7 +253,7 @@
 
   .hero-content {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
     text-align: center;
   }
 
@@ -419,13 +267,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .hero-right {
-    height: 420px;
-  }
-
-  .snippet-card { right: 10px; }
-  .git-card { left: 10px; }
 }
 
 @media (max-width: 600px) {
@@ -454,26 +295,9 @@
   .cta-secondary {
     width: 100%;
     justify-content: center;
-    box-sizing: border-box;
   }
 
-  .hero-right {
-    height: 300px;
-    margin-top: 20px;
-  }
-
-  .orbit-system {
-    transform: scale(0.65);
-    transform-origin: center center;
-  }
-
-  .orbit-icon {
-    font-size: 0.65rem;
-    width: 32px;
-    height: 32px;
-  }
-
-  .floating-card {
-    display: none; /* Hide floating snippets on small screens */
+  .code-window {
+    max-width: 100%;
   }
 }

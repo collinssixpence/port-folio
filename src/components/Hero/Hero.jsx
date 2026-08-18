@@ -100,61 +100,14 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* RIGHT SIDE: Interactive Orbit & Decorative Code Snippets */}
+        {/* RIGHT SIDE: Compact Floating Code Window */}
         <div className="hero-right">
-          <div className="orbit-system">
-            
-            {/* Center Premium Portrait Placeholder Glow */}
-            <div className="avatar-core">
-              <div className="avatar-inner-glow"></div>
-              <div className="avatar-placeholder">
-                <span className="avatar-code-initials">&lt;CS/&gt;</span>
-              </div>
-            </div>
-
-            {/* Orbit Ring 1 (Inner) */}
-            <div className="orbit-ring ring-1">
-              <div className="orbit-icon icon-react">
-                <span className="tooltip">React</span>
-                <code>jsx</code>
-              </div>
-              <div className="orbit-icon icon-python">
-                <span className="tooltip">Python</span>
-                <code>py</code>
-              </div>
-            </div>
-
-            {/* Orbit Ring 2 (Middle) */}
-            <div className="orbit-ring ring-2">
-              <div className="orbit-icon icon-ts">
-                <span className="tooltip">TypeScript</span>
-                <code>ts</code>
-              </div>
-              <div className="orbit-icon icon-django">
-                <span className="tooltip">Django</span>
-                <code>dj</code>
-              </div>
-            </div>
-
-            {/* Orbit Ring 3 (Outer) */}
-            <div className="orbit-ring ring-3">
-              <div className="orbit-icon icon-git">
-                <span className="tooltip">Git</span>
-                <code>git</code>
-              </div>
-              <div className="orbit-icon icon-js">
-                <span className="tooltip">JavaScript</span>
-                <code>js</code>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Floating Vercel-style Code Card Fragment */}
-          <div className="floating-card snippet-card">
+          <div className="code-window float-animation">
             <div className="card-header">
               <div className="header-dots">
-                <span></span><span></span><span></span>
+                <span className="dot red"></span>
+                <span className="dot yellow"></span>
+                <span className="dot green"></span>
               </div>
               <span className="card-filename">developer.ts</span>
             </div>
@@ -163,23 +116,11 @@ const Hero = () => {
                 <span className="keyword">const</span> developer = &#123;<br />
                 &nbsp;&nbsp;name: <span className="string">"Collins Sixpence"</span>,<br />
                 &nbsp;&nbsp;role: <span className="string">"Software Engineer"</span>,<br />
-                &nbsp;&nbsp;passion: <span className="string">"Building products."</span><br />
+                &nbsp;&nbsp;passion: <span className="string">"Building products"</span><br />
                 &#125;;
               </code>
             </pre>
           </div>
-
-          {/* Floating Git Commit Fragment */}
-          <div className="floating-card git-card">
-            <div className="git-status">
-              <span className="git-branch-icon">⌥</span>
-              <span className="git-branch-name">main</span>
-            </div>
-            <div className="git-message">
-              <span className="git-success">✓</span> git commit -m "feat: core architecture complete"
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
