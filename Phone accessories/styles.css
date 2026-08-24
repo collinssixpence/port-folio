@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    margin-left: 2rem;
+    
+}
+
+.nav-links ul{
+    display: flex;
+    justify-content: space-between;
+}
