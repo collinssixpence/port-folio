@@ -1,0 +1,122 @@
+.experience-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 6vw;
+  background-color: #050505;
+  box-sizing: border-box;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.timeline-layout {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding-left: 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-node {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.timeline-node:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #050505;
+  border: 1px solid #06b6d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-core {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.timeline-content {
+  background: rgba(10, 10, 10, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 32px;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.timeline-header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 16px;
+}
+
+.timeline-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #06b6d4;
+  margin-top: 2px;
+}
+
+.timeline-period {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.timeline-details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timeline-details-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bullet-token {
+  color: #a855f7;
+  font-family: monospace;
+  margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+  .experience-section { padding: 80px 20px; }
+  .timeline-content { padding: 20px; }
+  .timeline-header-block { flex-direction: column; gap: 8px; }
+}

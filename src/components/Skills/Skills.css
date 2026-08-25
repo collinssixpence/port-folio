@@ -1,0 +1,107 @@
+.skills-section {
+  position: relative;
+  width: 100%;
+  padding: 50px 40px;
+  background-color: #050505;
+  box-sizing: border-box;
+}
+
+.skills-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* Linear / Vercel inspired card outlines with subtle blur shadows */
+.skills-card {
+  position: relative;
+  background: rgba(10, 10, 10, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 32px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-card:hover {
+  border-color: rgba(6, 182, 212, 0.2);
+  transform: translateY(-2px);
+}
+
+.skills-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  letter-spacing: -0.3px;
+}
+
+/* Skill Tags Flex Wrapper */
+.skills-pills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Minimalist Dark Tech Pill Tags */
+.skill-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skill-pill-tag:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.1);
+}
+
+.skill-bullet {
+  color: #06b6d4;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.skill-pill-tag:hover .skill-bullet {
+  color: #22c55e;
+}
+
+.skill-name-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 80px 20px;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
