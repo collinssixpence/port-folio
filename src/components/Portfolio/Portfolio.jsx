@@ -7,6 +7,7 @@ import food from '../../assets/Food.png';
 import MyDBMS from '../../assets/MyDBMS.jpeg'; 
 import Superfert from '../../assets/Superfert Landing Page.png'; 
 import Vvid from '../../assets/Vivid.png'; 
+import Car from '../../assets/car.png'; 
 import Barber from '../../assets/Barber.png'; // Import your barber image file here
 
 const Portfolio = () => {
@@ -110,6 +111,28 @@ const Portfolio = () => {
       github: 'https://github.com/collinssixpence/barberdemo.git',
       demo: 'https://barber-de.vercel.app/',
     },
+
+    {
+  id: 6,
+  title: 'CarSale',
+  subtitle: 'Responsive Vehicle Marketplace & Car Dealership Platform',
+  location: 'Harare, Zimbabwe',
+  category: 'Software Engineering',
+  image: Car,
+  description:
+    'A modern, responsive vehicle marketplace built to help customers discover, filter, and explore cars online. The platform provides an intuitive browsing experience with vehicle categories, detailed car profiles, search and filtering functionality, and direct customer contact through WhatsApp.',
+  features: [
+    'Responsive Vehicle Marketplace Interface',
+    'Dynamic Car Search & Filtering',
+    'Vehicle Categories & Inventory Browsing',
+    'Individual Vehicle Details Pages',
+    'WhatsApp Customer Inquiry Integration',
+    'Responsive Mobile-First Design',
+  ],
+  techStack: ['HTML5', 'CSS3', 'JavaScript'],
+  github: 'https://github.com/collinssixpence/Carsale',
+  demo: 'https://carsale-eta.vercel.app/',
+},
   ];
 
   const filters = ['All', 'Software Engineering', 'UI/UX', 'Ventures'];
