@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
+import resumeFile from '../../assets/resume.pdf'; 
 
 const Hero = () => {
   const strings = [
@@ -94,7 +95,9 @@ const Hero = () => {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="/resume.pdf" download className="cta-secondary">
+            <a  href={resumeFile} 
+                          download="Collins_Sixpence_Resume.pdf" 
+                          className="resume-btn">
               <span>Download CV</span>
             </a>
           </div>
