@@ -8,7 +8,8 @@ import MyDBMS from '../../assets/MyDBMS.jpeg';
 import Superfert from '../../assets/Superfert Landing Page.png'; 
 import Vvid from '../../assets/Vivid.png'; 
 import Car from '../../assets/car.png'; 
-import Barber from '../../assets/Barber.png'; // Import your barber image file here
+import Barber from '../../assets/Barber.png';
+import zimGadgets from '../../assets/Gadgets.png'; 
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -111,28 +112,47 @@ const Portfolio = () => {
       github: 'https://github.com/collinssixpence/barberdemo.git',
       demo: 'https://barber-de.vercel.app/',
     },
-
     {
-  id: 6,
-  title: 'CarSale',
-  subtitle: 'Responsive Vehicle Marketplace & Car Dealership Platform',
-  location: 'Harare, Zimbabwe',
-  category: 'Software Engineering',
-  image: Car,
-  description:
-    'A modern, responsive vehicle marketplace built to help customers discover, filter, and explore cars online. The platform provides an intuitive browsing experience with vehicle categories, detailed car profiles, search and filtering functionality, and direct customer contact through WhatsApp.',
-  features: [
-    'Responsive Vehicle Marketplace Interface',
-    'Dynamic Car Search & Filtering',
-    'Vehicle Categories & Inventory Browsing',
-    'Individual Vehicle Details Pages',
-    'WhatsApp Customer Inquiry Integration',
-    'Responsive Mobile-First Design',
-  ],
-  techStack: ['HTML5', 'CSS3', 'JavaScript'],
-  github: 'https://github.com/collinssixpence/Carsale',
-  demo: 'https://carsale-eta.vercel.app/',
-},
+      id: 6,
+      title: 'CarSale',
+      subtitle: 'Responsive Vehicle Marketplace & Car Dealership Platform',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      image: Car,
+      description:
+        'A modern, responsive vehicle marketplace built to help customers discover, filter, and explore cars online. The platform provides an intuitive browsing experience with vehicle categories, detailed car profiles, search and filtering functionality, and direct customer contact through WhatsApp.',
+      features: [
+        'Responsive Vehicle Marketplace Interface',
+        'Dynamic Car Search & Filtering',
+        'Vehicle Categories & Inventory Browsing',
+        'Individual Vehicle Details Pages',
+        'WhatsApp Customer Inquiry Integration',
+        'Responsive Mobile-First Design',
+      ],
+      techStack: ['HTML5', 'CSS3', 'JavaScript'],
+      github: 'https://github.com/collinssixpence/Carsale',
+      demo: 'https://carsale-eta.vercel.app/',
+    },
+    {
+      id: 7,
+      title: 'Zim Gadgets',
+      subtitle: 'E-commerce Marketplace & Account Registration Platform',
+      location: 'Harare, Zimbabwe',
+      category: 'Software Engineering',
+      image: zimGadgets,
+      description:
+        'A dedicated e-commerce web platform built for tech accessories and gadget shopping in Zimbabwe. Features a clean search navigation bar, dynamic user authentication layouts, account type selections (Buyer/Seller), and integrated WhatsApp contact fields for local vendors.',
+      features: [
+        'User Account Registration & Role Selection (Buyer / Seller)',
+        'Secure Password Validation UI Elements',
+        'Top Navigation with Live Search Bar & Cart Counter',
+        'WhatsApp Number Integration for Seller Inquiries',
+        'Clean, Responsive Marketplace Design',
+      ],
+      techStack: ['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript'],
+      github: 'https://github.com/collinssixpence', 
+      demo: '#', 
+    },
   ];
 
   const filters = ['All', 'Software Engineering', 'UI/UX', 'Ventures'];
